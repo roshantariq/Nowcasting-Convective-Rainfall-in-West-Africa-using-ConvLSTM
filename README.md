@@ -1,0 +1,2 @@
+# Nowcasting-Convective-Rainfall-in-West-Africa-using-ConvLSTM
+A deep learning project focused on developing ConvLSTM models to predict convective rainfall events in the West African region. This model combines spatio-temporal data from satellite imagery to provide accurate, real-time weather predictions. The repository contains code for model training, evaluation, and visualization of predictions.
