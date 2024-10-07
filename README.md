@@ -12,7 +12,7 @@ __Input__: Sequential satellite imagery frames representing rainfall intensity o
 __Layers__:
 - ConvLSTM layers to capture spatiotemporal features.
 - Conv3D layers to refine and generate predictions for the next rainfall frame.
-- 
+
 __Output__: Predicted rainfall intensity for future frames.
 
 __Loss Function__: Mean Squared Error (MSE) - This loss function was chosen to minimize the squared difference between the predicted and actual rainfall intensities, making it ideal for continuous prediction tasks.
@@ -20,7 +20,7 @@ __Loss Function__: Mean Squared Error (MSE) - This loss function was chosen to m
 __Evaluation Metrics__:
 - Fractional Skill Score (FSS): Measures spatial accuracy across various window sizes (3x3, 5x5, 10x10).
 - Accuracy & AUC: Overall performance metrics assessed using accuracy and Area Under the Curve (AUC) via ROC curves.
-- 
+
 __Data__:
 Satellite-derived rainfall imagery specific to West Africa’s mesoscale convective systems is used as input data for nowcasting.
 
@@ -45,7 +45,9 @@ Output: Frame 5.
 
 ## Results
 Average Accuracy: The model achieved a test accuracy of 97.3%.
+
 FSS Scores: The highest FSS score was 0.68 for Model 2 (window size 3x3).
+
 AUC: High AUC values demonstrate the model’s robust performance in distinguishing convective rainfall events.
 
 ## Conclusion
