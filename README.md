@@ -54,10 +54,24 @@ AUC: High AUC values demonstrate the model’s robust performance in distinguish
 The ConvLSTM models developed in this project outperform traditional NWP (Numerical Weather Prediction) models, improving short-term rainfall prediction accuracy by 1.5%. These models are highly effective for real-time weather forecasting, offering crucial predictions for regions with complex weather systems like West Africa.
 
 ## File Structure
-model_training.py: Code to train ConvLSTM models using satellite data.
-data_preprocessing.py: Preprocessing pipeline, including data cleaning, normalization, and transformation.
-evaluation_metrics.py: Functions to calculate FSS, AUC, and other evaluation metrics.
-plot_predictions.py: Scripts to visualize the true rainfall maps versus model predictions.
+1. model1model1.py, model2model2.py, model3model3.py, model4model4.py:
+These files contain the model architectures for the four ConvLSTM models developed in the project. Each script defines the layers, activation functions, and optimizers used to train the respective models. The architectures differ slightly to explore different configurations for predicting rainfall intensity.
+The models take sequential satellite images as input and predict future rainfall intensities based on the spatiotemporal patterns captured by ConvLSTM layers.
+
+2. train_val_loss.py:
+This script visualizes the training and validation loss curves for each of the models. It is useful for monitoring overfitting and model performance during training.
+
+3. accuracy_plot.py:
+This file generates the accuracy plots for all four models, comparing their performance across epochs. This is essential for evaluating the consistency of model predictions and how well they generalize to unseen data.
+
+4. fss.py:
+These scripts are responsible for calculating and visualizing the Fractional Skill Score (FSS), which evaluates the spatial accuracy of the rainfall predictions at different window sizes. The FSS is a key metric in assessing the model’s ability to capture the spatial distribution of rainfall.
+
+5. prediction1.py, prediction2.py, prediction3.py, prediction4.py:
+These scripts are used to generate the prediction plots comparing the true and predicted rainfall maps for each model. Each script corresponds to one of the four models and outputs visual comparisons that are useful for analyzing model performance.
+
+6. roc1.py, roc2.py, roc3.py, roc4.py:
+These scripts generate the Receiver Operating Characteristic (ROC) curves and calculate the Area Under the Curve (AUC) for each model. This allows for a thorough evaluation of the models' ability to differentiate between different classes (rainfall/no rainfall) and is particularly helpful when dealing with binary classification tasks in weather prediction.
 
 ## Future Work
 Enhancements: Explore the integration of additional weather data (e.g., wind patterns, humidity).
