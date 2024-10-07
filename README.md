@@ -74,6 +74,6 @@ These scripts are used to generate the prediction plots comparing the true and p
 These scripts generate the Receiver Operating Characteristic (ROC) curves and calculate the Area Under the Curve (AUC) for each model. This allows for a thorough evaluation of the models' ability to differentiate between different classes (rainfall/no rainfall) and is particularly helpful when dealing with binary classification tasks in weather prediction.
 
 ## Future Work
-Enhancements: Explore the integration of additional weather data (e.g., wind patterns, humidity).
-Advanced Architectures: Investigate hybrid architectures combining ConvLSTM with attention mechanisms for enhanced performance.
-Deployment: Extend the current model for real-time nowcasting applications in West Africa.
+- Enhancements: Explore the integration of additional weather data (e.g., wind patterns, humidity).
+- Advanced Architectures: Investigate hybrid architectures combining ConvLSTM with attention mechanisms for enhanced performance.
+- Deployment: Extend the current model for real-time nowcasting applications in West Africa.
