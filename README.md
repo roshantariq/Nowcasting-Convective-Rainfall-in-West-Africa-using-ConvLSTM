@@ -8,18 +8,25 @@ The main objective is to accurately predict rainfall intensity at short interval
 ## Methodology
 ### Model Architecture:
 __Input__: Sequential satellite imagery frames representing rainfall intensity over time.
+
 __Layers__:
 - ConvLSTM layers to capture spatiotemporal features.
 - Conv3D layers to refine and generate predictions for the next rainfall frame.
+- 
 __Output__: Predicted rainfall intensity for future frames.
+
 __Loss Function__: Mean Squared Error (MSE) - This loss function was chosen to minimize the squared difference between the predicted and actual rainfall intensities, making it ideal for continuous prediction tasks.
+
 __Evaluation Metrics__:
 - Fractional Skill Score (FSS): Measures spatial accuracy across various window sizes (3x3, 5x5, 10x10).
 - Accuracy & AUC: Overall performance metrics assessed using accuracy and Area Under the Curve (AUC) via ROC curves.
+- 
 __Data__:
 Satellite-derived rainfall imagery specific to West Africa’s mesoscale convective systems is used as input data for nowcasting.
+
 __Computational Resources__:
 The ARC4 high-performance computing cluster was used to train the ConvLSTM models, offering the computational power necessary for large-scale data processing and deep learning model training.
+
 __Model Configurations__:
 Four different ConvLSTM architectures were designed and tested, each with varying input and output configurations:
 
